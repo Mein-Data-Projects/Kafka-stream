@@ -3,6 +3,7 @@ import os
 from confluent_kafka import KafkaException, Producer
 from dotenv import load_dotenv
 
+
 def main():
     settings = 
     
