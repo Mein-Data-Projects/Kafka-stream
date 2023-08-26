@@ -2,6 +2,11 @@ import json
 
 
 class ProducerMessage:
+    """
+    Handles different type of input data and correctly serializes them using
+    convert_value_to_bytes method
+    """
+
     def __init__(self, topic: str, value, key=None) -> None:
         self.topic = f"{topic}"
         self.key = key
