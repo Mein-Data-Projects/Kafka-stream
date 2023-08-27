@@ -9,7 +9,7 @@ def main():
     settings = KafkaSettings()
     producer = KafkaProducer(settings=settings)
     message = ProducerMessage(
-        topic="MeinKafkaTopic", value={"value": "MeinKafkaTopic"}, key=None
+        topic="MeinKafkaTopic", value={"value": "MeinKafkaTopic"}, key="Pikachu"
     )
     producer.produce(message)
 

@@ -1,0 +1,8 @@
+services:
+  prometheus:
+    image: prometheus-custom-config
+    build:
+      context: prometheus
+      dockerfile: dockerfile
+    ports:
+      - 9090:9090
