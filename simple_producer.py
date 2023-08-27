@@ -16,7 +16,7 @@ def main():
     producer = Producer(settings)
     producer.produce(topic="MeineKafkaTopic", key=None, value="MeineKafkaTopic-111")
     # Wait for the confirmation that the message was received
-    producer.finish()
+    producer.flush()
 
 
 if __name__ == "__main__":
