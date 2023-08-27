@@ -14,7 +14,7 @@ def main():
     }
 
     producer = Producer(settings)
-    producer.produce(topic="MeineKafkaTopic", key=None, value="MeineKafkaTopic-111")
+    producer.produce(topic="MeinKafkaTopic", key="Pokemon", value="MeinKafkaTopic-111")
     # Wait for the confirmation that the message was received
     producer.flush()
 

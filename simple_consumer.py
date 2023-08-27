@@ -1,11 +1,14 @@
+from dotenv import load_dotenv
 from confluent_kafka import Consumer
 from kafka_settings import KafkaSettings
-from kafka_producer import KafkaProducer
-from kafka_producer_message import ProducerMessage
 
 if __name__ == "__main__":
+    load_dotenv()
+
     settings = KafkaSettings()
+    settings.conf["group.id"] = "python-group-1"
     consumer = Consumer(settings.conf)
+    consumer.subscribe(["MeinKafkaTopic",])
     try:
         while True:
             msg = consumer.poll(1.0)
